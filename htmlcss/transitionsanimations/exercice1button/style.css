@@ -1,0 +1,25 @@
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.btn {
+    position: absolute;
+    width: 500px;
+    font-size: 5rem;
+    transition-duration: 1000ms;
+    background-color: black;
+    transition-timing-function: ease-in;
+}
+
+
+.btn:hover {
+
+    color: green;
+    border-radius: 20px;
+    filter: opacity(50%);
+    transform: scale(1.2);
+   
+}

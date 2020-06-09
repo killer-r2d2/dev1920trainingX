@@ -1,0 +1,247 @@
+
+/* colors */
+
+$Primary: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+$VeryLightGrayishBlue: hsl(240, 78%, 98%);
+$LightGrayishBlue: hsl(234, 14%, 74%);
+$GrayishBlue: hsl(233, 13%, 49%);
+$DarkGrayishBlue: hsl(232, 13%, 33%);
+
+/* mixins */
+
+
+
+@mixin annuallymonthly {
+    margin-top: 10px;
+    font-weight: bolder;
+    color: $LightGrayishBlue;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@mixin liststyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 150px;
+    padding: 30px;
+    list-style-type: none;
+   
+}
+
+@mixin borderitem {
+    border: solid grey 0.2px;
+    width: 280px;
+    height: 80px;
+    text-align: center;
+    padding: 20px;
+    border-right: none;
+    border-left: none;
+    font-weight: bolder;
+    border-bottom: none; 
+    border-color: $LightGrayishBlue;
+
+}
+
+
+@mixin boxstyle {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    width: 375px;
+    height: 500px;
+    margin-top: 30px;
+}
+
+
+
+
+@mixin pricestyle {
+    font-size: 35px;
+    display: flex;
+    font-size: 50px;
+    font-weight: bolder;
+    color: $DarkGrayishBlue;   
+}
+
+@mixin dollarsign {
+    font-size: 34px;
+    padding: 10px;
+    font-weight: bolder;
+    
+}
+
+@mixin boxtopic {
+    font-weight: bolder;
+    color: $GrayishBlue;
+    margin: 25px;
+}
+
+@mixin btnstyle {
+    border-radius: 15px;
+    width: 320px;
+    height: 60px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+   
+
+/* body, title, topic, checkbox, */
+
+@media screen and (min-device-width: 1024px) {
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;    
+        align-items: center;       
+    }
+
+    
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background-image: url(images/bg-top.svg), url(images/bg-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: 100% 0%, 0% 150%;
+    background-color: $VeryLightGrayishBlue;
+}
+
+
+
+
+.title {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    color: $GrayishBlue;
+    margin-top: 100px;
+}
+
+.checkbox {
+    display: block;
+    position: relative;
+    height: 40px;
+    width: 70px;
+    border-radius: 20px;
+    background-image: $Primary;
+}
+
+
+.bolle {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 80%;
+    top: 5px;
+    left: 3px;
+    transition: 1s;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox input:checked + .bolle {
+    left: 35px;      
+}
+
+
+
+.topic {
+    display: flex;
+    justify-content: center;
+    margin: 80px;
+}
+
+
+.topic__switch {
+    @include annuallymonthly();
+}
+
+
+
+
+/* boxen */
+
+.box {
+    @include boxstyle();
+    background-color: white;
+}
+
+.box__topic {
+    @include boxtopic();
+    
+}
+
+
+.box__list {
+    @include liststyle();
+}
+
+.box__item {
+    @include borderitem();
+}
+
+
+.box__price {
+    @include pricestyle();
+}
+
+.box__dollarsign {
+    @include dollarsign();
+    
+}
+
+.box__btn {
+    @include btnstyle();
+    background-image: $Primary;
+    color: $VeryLightGrayishBlue;
+    transition-duration: 0.4s;
+}
+
+.box__btn:hover {
+    background-image: $Primary;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.box--color {
+    background-image: $Primary;
+}
+
+.box--size {
+    height: 530px;
+}
+
+
+.box__topic--color {
+    color: white;
+}
+
+.box__btn--color {
+    background-image: none;
+    color: hsl(237, 63%, 64%);
+    background-color: white;
+    transition-duration: 0.4s;
+}
+
+.box__btn--color:hover {
+    background-color: white;
+    color: $Primary;
+    
+}
+
+.box__item--line {
+    border-bottom: 0.2px solid $LightGrayishBlue;
+}
+
+

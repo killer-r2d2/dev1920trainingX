@@ -1,0 +1,50 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      /* Aufgabe:
+       * Nimm den unten aufgeführten Array von Objekten und Berechne die Summe und den Durchschnitt des Alters der Kunden.
+       * Der Altersdurchschnitt soll einmal global und 1x pro Geschlecht ausgegeben werden.
+       * Überleg dir zuerst Schritt für Schritt, was du alles machen musst, um zum Ziel zu kommen und was du dafür benötigst.
+
+       * Erwartete Ausgabe auf der Konsole:
+        Summe des Alters aller Kunden: 159 Jahre
+        Durchschnittsalter der Kunden: 31.8 Jahre
+        Durchschnittsalter der Frauen: 39 Jahre
+        Durchschnittsalter der Männer: 27 Jahre
+       */
+
+      var kunden = [
+        {firstname: "Hans", lastname: "Meier", phoneNumber: "0711234567", age: 35, sex: "m"},
+        {firstname: "Janine", lastname: "Müller", phoneNumber: "0711234566", age: 55, sex: "f"},
+        {firstname: "Andrea", lastname: "Frei", phoneNumber: "0711234568", age: 23, sex: "f"},
+        {firstname: "Timo", lastname: "Fritsche", phoneNumber: "0711234569", age: 19, sex: "m"},
+        {firstname: "Bart", lastname: "Bellon", phoneNumber: "0711234523", age: 27, sex: "m"},
+      ];
+
+      var summe = 0;
+      var summeMaenner = 0;
+      var anzMaenner = 0;
+      var summeFrauen = 0;
+      var anzFrauen = 0;
+      for (var i = 0; i < kunden.length; i++) {
+        summe += kunden[i].age;
+        if (kunden[i].sex === 'm') {
+          summeMaenner += kunden[i].age;
+          anzMaenner++;
+        } else {
+          summeFrauen += kunden[i].age;
+          anzFrauen++;
+        }
+      }
+      var durchschnitt = summe / kunden.length;
+      console.log("Summe des Alters aller Kunden: " + summe + " Jahre");
+      console.log("Durchschnittsalter der Kunden: " + durchschnitt + " Jahre");
+      var durchschnittFrauen = summeFrauen / anzFrauen;
+      console.log("Durchschnittsalter der Kunden: " + durchschnittFrauen + " Jahre");
+      var durchschnittMaenner = summeMaenner / anzMaenner;
+      console.log("Durchschnittsalter der Kunden: " + durchschnittMaenner + " Jahre");
+
+    </script>
+  </body>
+</html>

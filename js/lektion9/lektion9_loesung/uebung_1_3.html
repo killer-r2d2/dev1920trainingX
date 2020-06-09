@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      * {
+        margin: 10px;
+        padding: 5px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+      }
+      </style>
+  </head>
+  <body>
+    <h1>Get und Post Requests</h1>
+    <button id="execute-add">Eintrag hinzufügen</button>
+    <button id="execute-get">Einträge abrufen (GET)</button>
+    <button id="execute-post">Einträge speichern (POST)</button>
+    <ul id="liste"></ul>
+    <script type="module">
+      import * as Tools from './tools.js';
+      /* Aufgabe: XHR mit GET und POST
+       *
+       * Die Inhalte der Liste sollen auf einem Server gespeichert werden.
+       * Speichern der Liste geschieht mit dem POST-Aufruf. Abrufen der Listeneinträge
+       * geschieht mit dem GET-Aufruf.
+       * Die Buttons, das Rendern, sowie das hinzufügen und entfernen von Elementen ist bereits umgesetzt.
+       * Du musst nur das Speichern und Abrufen implementieren.
+       *
+       * Implementiere die Methoden getAufruf und postAufruf:
+       *
+       * Beim klick auf postAufrufStarten, soll der Inhalt von todos
+       * als POST im JSON Format an die URL http://localhost:3001/todos geschickt werden.
+       *
+       * Beim klick auf getAufrufStarten, soll die URL http://localhost:3001/todos
+       * mit einem GET Aufruf aufgerufen werden. Die Schnittstelle antwortet im JSON format.
+       * Der vom JSON umgewandelte Wert soll danach in die Variable todos gespeichert werden.
+       * Danach muss render() aufgerufen werden, damit sich die Liste aktualisiert.
+       *
+       */
+      var todos = [];
+
+      function getAufrufStarten() {
+        Tools.get('http://localhost:3002/todos', function (response) {
+          todos = response;
+          render();
+        });
+      }
+
+      function postAufrufStarten() {
+        Tools.post('http://localhost:3002/todos', todos, function (response) {
+          todos = response;
+          render();
+        });
+      }
+
+      function addItem() {
+        todos.push(
+          {firstname: "Bart", name: "Simpson " + (todos.length + 1), age: 10, sex: 'm'}
+        );
+        render();
+      }
+
+      function removeItem(event) {
+        todos.splice(event.target.id, 1);
+        render();
+      }
+
+      function render() {
+        var liste = document.querySelector('#liste');
+        liste.innerHTML = ''; // alte Liste löschen
+        todos.forEach(function (elem, index) {
+          var li = document.createElement('li'); // Neues Element erzeugen
+          li.innerHTML = elem.firstname + ' ' + elem.name + ' <button>Löschen</button>'; // Daten abfüllen
+          li.id = index; // Id setzen (später wichtig für's löschen)
+          liste.appendChild(li); // Element an Fragment hängen
+        });
+      }
+
+      document.querySelector('#execute-add').addEventListener('click', addItem);
+      document.querySelector('#execute-get').addEventListener('click', getAufrufStarten);
+      document.querySelector('#execute-post').addEventListener('click', postAufrufStarten);
+      document.querySelector('#liste').addEventListener('click', Tools.delegate('li button', removeItem));
+    </script>
+  </body>
+</html>
+
+

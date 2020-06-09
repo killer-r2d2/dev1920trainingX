@@ -1,0 +1,6 @@
+body {
+  background-color: hotpink; }
+
+@media screen {
+  h1 {
+    min-width: 1024px; } }

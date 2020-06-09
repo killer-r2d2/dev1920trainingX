@@ -1,0 +1,25 @@
+<html>
+  <head></head>
+  <body>
+    <button id="alert-btn">Alert</button>
+    <button id="console-btn">Console</button>
+    <script>
+      /* Aufgabe:
+       * Erstelle 2 Buttons welche jeweils beim Klick eine Funktion auslösen.
+       * Der erste Button mit dem Text "Alert" soll eine alert() Box mit dem Text "Das ist ein Alert" auslösen
+       * Der zweite Butotn mit dem Text "Log" soll etwas auf der Konsole ausgeben
+       */
+
+      document.querySelector('#alert-btn').addEventListener('click', function () {
+        alert("ALERT!");
+      })
+      document.querySelector('#console-btn').addEventListener('click', function () {
+        console.log('logging');
+      })
+
+    </script>
+
+  </body>
+</html>
+
+

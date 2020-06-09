@@ -1,0 +1,30 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      /* Aufgabe:
+       * a) Verwandle den Satz in ein Array von Wörtern (ohne abstände in den Wörtern).
+       * b) Gib das Alphabet von der Variable alphabet in Kleinbuchstaben aus.
+       * c) Gib die Länge des Alphabets aus.
+       * d) Beschneide die Variable Alphabet so, dass nur noch EFGH ausgegeben wird.
+       *
+      */
+       var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+       var satz = "Fritz jagt im völlig verwarlosten Auto durch die Stadt";
+
+      // a) Verwandle den Satz in ein Array von Wörtern (ohne abstände in den Wörtern).
+       console.log(satz.split(" "));
+      // b) Gib das Alphabet von der Variable alphabet in Kleinbuchstaben aus.
+       console.log(alphabet.toLocaleLowerCase());
+      // c) Gib die Länge des Alphabets aus.
+       console.log(alphabet.length);
+      // d) Beschneide die Variable Alphabet so, dass nur noch EFGH ausgegeben wird.
+       console.log(alphabet.slice(4,8));
+
+
+
+    </script>
+  </body>
+</html>
+
+

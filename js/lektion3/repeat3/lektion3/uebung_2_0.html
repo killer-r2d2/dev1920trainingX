@@ -1,0 +1,54 @@
+<html>
+  <head></head>
+  <body>
+
+    <div class="location">
+
+
+    </div>
+
+
+    <script>
+      /* Aufgabe:
+       * Erstelle 2 Buttons welche jeweils beim Klick eine Funktion auslösen.
+       * Der erste Button mit dem Text "Alert" soll eine alert() Box mit dem Text "Das ist ein Alert" auslösen
+       * Der zweite Butotn mit dem Text "Log" soll etwas auf der Konsole ausgeben
+       */
+
+
+       var loc = document.querySelector('.location')
+
+       btn1 = document.createElement('button');
+       btn1.classList.add('btnAlert');
+       btn1.innerText = 'btn alert';
+       loc.appendChild(btn1);
+
+       btn2 = document.createElement('button');
+       btn2.classList.add('btnLog')
+       btn2.innerText = 'btn log';
+       loc.appendChild(btn2);
+       
+
+
+       var BTN1 = document.querySelector('.btnAlert');
+       BTN1.addEventListener('click', alertBox);
+
+
+       var BTN2 = document.querySelector('.btnLog');
+       BTN2.addEventListener('click', consolele);
+
+
+       function alertBox() {
+         alert('Hallo aus der alert Box');
+       }
+
+       function consolele() {
+         console.log('Hallo aus der console');
+       }
+
+
+    </script>
+  </body>
+</html>
+
+

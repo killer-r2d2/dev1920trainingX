@@ -1,0 +1,95 @@
+/* Set globals */
+
+html {
+    box-sizing: border-box;
+}
+
+/* Setup box sizing*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Ebedding styling */
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #8DE583;
+
+}
+
+body, body * {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* global styling */
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: white;
+    width: 33%;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+h1 {
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 100px;
+}
+
+.container--addTask {
+    text-align: center;
+}
+
+/* links and icons */
+
+a, a:visited, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #CBE5C8;
+}
+
+.editLink {
+    font-weight: bold;
+}
+
+
+.fa-plus-circle:before {
+
+    font-size: 50px;
+}
+
+.fa-info-circle:before, .fa-trash-alt:before {
+
+    font-size: 30px;
+
+}
+
+.infoTrashBox {
+    display: flex;
+    justify-content: space-around;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+
+
+
+
+

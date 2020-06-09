@@ -1,0 +1,81 @@
+body {
+   background-color: #C4E0FF;
+}
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.bowl {
+    border: 1px solid black;
+    background-color: white;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+}
+
+/* hat, head, eyes, nose */
+
+.hat {
+    border-radius: 0px;
+    background-color: black;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eye {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.nose {
+    width: 20px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #FFA833;
+    margin-top: 20px;
+}
+
+
+
+
+
+/* chest and arms */
+
+.mainchest {
+    display: flex;
+}
+
+.chest {
+    height: 120px;
+    width: 120px;
+    border-radius: 100px;
+}
+
+.arm {
+    width: 100px;
+    height: 20px;
+    background-color: #855D27;
+    border: 1px solid black;
+    margin-top: 45px;
+}
+
+
+
+.leg {
+    
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+
+}

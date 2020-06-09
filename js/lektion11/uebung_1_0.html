@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      * {
+        margin: 10px;
+        padding: 5px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+      }
+      </style>
+  </head>
+  <body>
+    <h1>Happyness Generator with Fetch</h1>
+
+    <button id="execute-request">neues Gif fetchen</button>
+    <div id="container"></div>
+    <script>
+      /* Aufgabe:
+       * Erstelle eine Funktion genannt getGif, welche beim klick auf den Button ausgeführt wird.
+       * Verwende dazu die fetch Methode mit Promises. Also kein XMLHttpRequest mehr - die Zeiten sind vorbei.
+       *
+       * Die Funktion soll einen Get-Request ausführen auf die URL:
+       *  https://api.giphy.com/v1/gifs/random?api_key=vteZ9Q3wIUEvN7heLsE7bazziLfqxerV&limit=1&tag=kitten
+       *
+       * Bei jedem Aufruf erhälst du eine JSON Antwort, welche die URL zu einem Gif enthält.
+       * Entferne das vorherige IMG element (sofern vorhanden),
+       * erstelle im DOM ein neues IMG Element mit der URL des erhaltenen Gifs als src Wert und
+       * setzte das erstelle IMG Element in das #container div.
+       *
+       * Tipp: Die URL des Bildes befindet sich unter data.image_url in der JSON Antwort.
+       *       Die JSON Antwort musst du natürlich erst umwandeln, verwende dazu aber nicht JSON.parse().
+       * Erwartetes Resultat:
+        - Bei jedem klick auf "neues Gif laden" wird ein neues Bild angezeigt
+      */
+      document.querySelector('#execute-request').addEventListener('click', getGif);
+      var container = document.querySelector('#container');
+
+      function getGif() {
+        // Dein code hier
+
+          fetch('https://api.giphy.com/v1/gifs/random?api_key=vteZ9Q3wIUEvN7heLsE7bazziLfqxerV&limit=1&tag=kitten')
+          .then(function(response) {
+          // response enthält die Antwort des Servers, so wie vorher
+          return response.json(); // mit .json() wird im hintergrund JSON.parse ausgeführt
+          })
+          .then(function(Objekt) {
+
+          var newImage = document.createElement('img');
+          newImage.setAttribute("src", Objekt.data.image_url);
+          container.innerHTML ="";
+          container.appendChild(newImage);
+          })
+      }
+      
+
+
+
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <style>
+      * {
+        margin: 10px;
+        padding: 5px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <h1>Telefonbuch 8000</h1>
+
+    <ul id="liste">
+      <li>Homer Simpson <strong>071 123 45 67</strong></li>
+      <li>Lisa Simpson  <strong>071 123 45 68</strong></li>
+      <li>Marge Simpson <strong>071 123 45 69</strong></li>
+      <li>Maggie Simpson <strong>071 123 45 70</strong></li>
+      <li>Hugo Simpson <strong>071 123 45 71</strong></li>
+    </ul>
+    <input type="text" placeholder="Vorname" id="firstname">
+    <input type="text" placeholder="Nachname" id="name">
+    <input type="text" placeholder="Nummer" id="number">
+    <script>
+      /* Aufgabe:
+       * Bau ein Telefonbuch.
+         Oben hast du eine Liste von Namen, Vornamen und Telefonnummern, die ein Telefonbuch darstellt.
+
+         Bau ein Formular mit 3 Eingabfeldern (Vorname, Name, Telefonnummer)
+         Wenn auf einem der Felder Enter gedrückt wird, soll eine neue Zeile ins Telefonbuch eingefügt werden.
+      */
+
+    var firstname = document.querySelector('#firstname');
+    var lastname = document.querySelector('#name');
+    var number = document.querySelector('#number');
+    var list = document.querySelector('#liste');
+    function insert (event) {
+      if (event.code === 'Enter') {
+        var li = document.createElement('li');
+        li.innerHTML = firstname.value + ' ' + lastname.value + ' <strong>' + number.value + '</strong>';
+        liste.appendChild(li);
+      }
+    }
+
+    document.querySelectorAll('input').forEach(function (elem) {
+      elem.addEventListener('keyup', insert);
+    });
+
+    </script>
+  </body>
+</html>
+
+

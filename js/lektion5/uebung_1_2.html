@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <style>
+      * {
+        margin: 10px;
+        padding: 5px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+      }
+    </style>
+  </head>
+
+  <h1>Hallo NAME!</h1>
+
+  <body>
+    <script>
+      /* Aufgabe:
+       * Erstelle ein Eingabefeld und einen Button "Speichern".
+       * Wenn du auf speichern klickst, wird der Name im H1 durch
+       * die eingabe ersetzt und der eingegebene Name wird im Browser gespeichert.
+       * Wenn du das Fenster neu lädst, soll der gleiche Name
+       * wie vorher eingegeben wurde, wieder angezeigt werden.
+
+       Erwartetes Resultat:
+       Du trägst deinen Namen ein und klickst auf speichern.
+       Vor & Nach dem Reload erscheint dein Name im H1 Titel
+       z.B. <h1>Hallo Pascal!</h1>
+      */
+
+      // Eingabefeld
+      var newInput = document.createElement('input');
+      document.body.appendChild(newInput);
+
+      // Button
+      var newBtn = document.createElement('button');
+      newBtn.innerText = 'Speichern';
+      document.body.appendChild(newBtn);
+
+      var myButton = document.querySelector('button');
+      myButton.addEventListener('click', function() {
+      var myTitle = document.querySelector('h1');
+      myTitle.innerText = 'Hallo ' + document.querySelector('input').value; // kombiniere Hallo und den Wert im Input Feld
+      localStorage.setItem('h1', document.querySelector('input').value);    // Speichere den Wert
+      document.querySelector('input').value = '';                           // setze ihn wieder auf null
+      });
+
+      
+      if (localStorage.getItem('h1')) {                                     // holle den value vom key aus dem local.Storage
+        var myTitle = document.querySelector('h1');                           
+        myTitle.innerText = 'Hallo ' + localStorage.getItem('h1');
+      }
+
+      
+      
+
+
+      
+
+    </script>
+  </body>
+</html>
+
+

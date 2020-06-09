@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <style>
+      h1, div {
+        color: blue;
+      }
+
+      .red-title {
+        color: red;
+      }
+
+      .green-text {
+        color: green;
+      }
+
+      .orange-text {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Roter Titel</h1>
+
+    <div id="text">Grüner Text</div>
+
+    <div class="comment">Oranger Text</div>
+
+    <script>
+        /* Aufgabe:
+         * verwende Javascript um den verschiedenen Elementen die oben aufgelisteten Klassen zu setzen:
+         * a) Verwende einen Type-Selektor um den Titel per Javascript Rot zu machen (Klasse red-title)
+         * b) Verwende einen ID-Selektor um den ersten Text per Javascript Grün zu machen (Klasse green-text)
+         * c) Verwende einen Klassen-Selektor um den zweiten Text per Javascript  orange zu machen (Klasse orange-text)
+        */
+
+      var title = document.querySelector('h1');   /* element selektieren */
+      title.classList.add('red-title');
+
+      var textgreen = document.querySelector('#text');  /* id selektieren */
+      text.classList.add('green-text');
+      
+      var textorange = document.querySelector('.comment');  /* class selektieren */
+      textorange.classList.add('orange-text');
+
+
+      </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,31 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      /* Aufgabe:
+       * Nimm den unten aufgeführten Array und gib nur die geraden Zahlen in der Konsole aus.
+       * Benötigte Werkzeuge: Schlaufe, Konsole, If-Bedingung, Modulo.
+       * Überleg dir zuerst Schritt für Schritt, was du alles machen musst, um zum Ziel zu kommen und was du dafür benötigst.
+
+       * Zusatzaufgabe (für schnellere):
+       * Wie kannst du die Aufgabe noch lösen? Studiere dazu filter() und map auf MDN.
+       */
+
+       var zahlen = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
+       for (var i = 0; i < zahlen.length; i++) {
+         if (zahlen[i] % 2 === 0) {
+           console.log(zahlen[i] + ' ist gerade');
+         }
+       }
+
+       // Lösung mit Map und Filter
+       zahlen.filter(function (elem) {
+         return elem % 2 === 0;
+       }).map(function (elem) {
+         console.log(elem + ' ist gerade');
+       });
+
+    </script>
+  </body>
+</html>

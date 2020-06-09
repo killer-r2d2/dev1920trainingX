@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: khaki;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+
+}
+
+.box {
+    background-color: lightgray;
+    height: 300px;
+    width: 200px;
+    border: solid 0.5px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly10
+}
+
+.entry {
+    background-color: white;
+    height: 70px;
+    width: 70px;
+    border: solid grey 0.5px;
+}

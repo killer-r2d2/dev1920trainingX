@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <style>
+      * {
+        margin: 10px;
+        padding: 5px;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 300;
+      }
+      </style>
+  </head>
+  <body>
+    <h1>Liste per XHR laden</h1>
+
+    <ul id="liste"></ul>
+    <script>
+      /* Aufgabe:
+       * Erstelle eine Funktion, welche beim Laden der Seite einen XHR-Get
+       * Request auf die folgende Seite macht: http://localhost:3002/json
+       *
+       * Beim Aufruf erhälst du eine JSON Antwort. Für die darin enthaltenen Einträge,
+       * sollst du jeweils einen LI-Element erstellen und oben in die das UL mit der id
+       * #liste einfügen.
+       *
+       * Erwartetes Resultat:
+       *
+       * <ul id="liste">
+       * <li>Bart Simpson (10)</li>
+       * <li>Homer Simpson (36)</li>
+       * <li>Lisa Simpson (8)</li>
+       * <li>Marge Simpson (34)</li>
+       * <li>Hugo Simpson (10)</li>
+       * </ul>
+       *
+       * Damit der Aufruf gelingt, muss das "Backend" laufen. Geh in den Ordner backend und führe folgendes aus:
+       * npm install
+       * npm start
+       * Jetzt sollte sowas stehen: "Fake Todo Backend listening on port 3002!"
+      */
+      var list = document.querySelector('#liste');
+      var request = new XMLHttpRequest();
+      request.open('GET', 'http://localhost:3002/json', true);
+
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+          var simpsons = JSON.parse(request.responseText);
+
+          for (var i = 0; i < simpsons.length; i++) {
+            var li = document.createElement('li');
+            li.innerHTML = `${simpsons[i].firstname} ${simpsons[i].name} (${simpsons[i].age})`
+            list.appendChild(li);
+          }
+        } else {
+          console.log('Server Fehler');
+          console.log(request);
+        }
+      };
+      request.send();
+
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,39 @@
+<html>
+  <head></head>
+  <body>
+    <script>
+      /* Aufgabe:
+       * Nimm den unten aufgeführten Array von Objekten und Berechne die Summe und den Durchschnitt des Alters der Kunden.
+       * Der Altersdurchschnitt soll einmal global und 1x pro Geschlecht ausgegeben werden.
+       * Überleg dir zuerst Schritt für Schritt, was du alles machen musst, um zum Ziel zu kommen und was du dafür benötigst.
+
+       * Erwartete Ausgabe auf der Konsole:
+        Summe des Alters aller Kunden: 159 Jahre
+        Durchschnittsalter der Kunden: 31.8 Jahre
+        Durchschnittsalter der Frauen: 39 Jahre
+        Durchschnittsalter der Männer: 27 Jahre
+       */
+
+      var kunden = [
+        {firstname: "Hans", lastname: "Meier", phoneNumber: "0711234567", age: 35, sex: "m"},
+        {firstname: "Janine", lastname: "Müller", phoneNumber: "0711234566", age: 55, sex: "f"},
+        {firstname: "Andrea", lastname: "Frei", phoneNumber: "0711234568", age: 23, sex: "f"},
+        {firstname: "Timo", lastname: "Fritsche", phoneNumber: "0711234569", age: 19, sex: "m"},
+        {firstname: "Bart", lastname: "Bellon", phoneNumber: "0711234523", age: 27, sex: "m"},
+      ];
+
+      var totalAge = 0;
+      for ( i = 0; i < kunden.length; i++) {
+        totalAge = totalAge + kunden[i].age;
+      }
+
+
+      var averageAge = totalAge / kunden.length;
+      console.log("Summe des Alters aller kunden: " + totalAge + " Jahre");
+      console.log("Durchschnittsalter der Kunden: " + averageAge + " Jahre");
+
+
+
+    </script>
+  </body>
+</html>

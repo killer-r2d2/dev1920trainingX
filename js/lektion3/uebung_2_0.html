@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <style>
+
+      .btn {
+        height: 40px;
+        width: 40px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+
+    <button class="btn" id="btn1">Alert</button>
+    <button class="btn" id="btn2">Log</button>
+
+    <script>
+      /* Aufgabe:
+       * Erstelle 2 Buttons welche jeweils beim Klick eine Funktion auslösen.
+       * Der erste Button mit dem Text "Alert" soll eine alert() Box mit dem Text "Das ist ein Alert" auslösen
+       * Der zweite Butotn mit dem Text "Log" soll etwas auf der Konsole ausgeben
+       */
+
+
+      // Alert Button
+      function do1() {
+        alert('Das ist ein Alert');
+      }
+ 
+      var myButton = document.querySelector('#btn1');
+      myButton.addEventListener('click', do1);
+
+      // Log Button
+      function do2() {
+        console.log('gut gemacht');
+      }
+
+      var logButton = document.querySelector('#btn2');
+      logButton.addEventListener('click', do2);
+
+
+    </script>
+  </body>
+</html>
+
+

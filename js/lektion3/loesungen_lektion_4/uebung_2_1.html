@@ -1,0 +1,54 @@
+<html>
+  <head></head>
+  <body>
+    <input type="text" id="text-input">
+    <div id="keyup"></div>
+    <div id="keydown"></div>
+    <div id="change"></div>
+    <div id="input"></div>
+    <div id="blur"></div>
+    <div id="focus"></div>
+    <script>
+      /* Aufgabe:
+       * Bau ein Eingabfeld, welches bei jeder Änderung (Texteingabe),
+       * den eingegebenen Wert, abhängig vom Event, in ein separates DIV schreibt.
+       * Also beim change Event, den Wert des Eingabefeldes ins div mit der id #change schreiben
+       * Beim blur Event, den Wert des Eingabefeldes ins div mit der id #blur schreiben
+        ....
+
+       * Dadurch siehst du, wie sich die unterschiedlichen Events verhalten und welcher Event der
+       * Beste für deinen Zweck ist
+       * Welcher Event ist der Beste für die Texteingabe eines Benutzers?
+       */
+      var input = document.querySelector('#text-input');
+      input.addEventListener('keyup', function (event) {
+        var elem = document.querySelector('#keyup');
+        elem.innerText = input.value;
+      });
+      input.addEventListener('keydown', function (event) {
+        var elem = document.querySelector('#keydown');
+        elem.innerText = input.value;
+      });
+      input.addEventListener('change', function (event) {
+        var elem = document.querySelector('#change');
+        elem.innerText = input.value;
+      });
+      input.addEventListener('input', function (event) {
+        var elem = document.querySelector('#input');
+        elem.innerText = input.value;
+      });
+      input.addEventListener('blur', function (event) {
+        var elem = document.querySelector('#blur');
+        elem.innerText = input.value;
+      });
+      input.addEventListener('focus', function (event) {
+        var elem = document.querySelector('#focus');
+        elem.innerText = input.value;
+      });
+
+
+    </script>
+  </body>
+</html>
+
+

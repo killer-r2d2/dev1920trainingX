@@ -1,0 +1,114 @@
+body {
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-size: 50px;
+font-weight: bolder;
+background-color: grey;
+display: flex;
+justify-content: center;
+}
+
+
+  
+  .mainbolle__bolle1 {
+    color: white;
+    background-color: #9AB3AC;
+    border: none;
+    padding: 40px;
+    border-radius: 50%;
+    width: 20px;
+    transition-duration: 5s;
+    animation-name: color1;
+    animation-delay: 0.1ms;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+    }
+  
+  .mainbolle__bolle2 {
+    color: grey;
+    background-color: #B39288;
+    border: none;
+    padding: 40px;
+    border-radius: 50%;
+    width: 20px;
+    animation-name: color2;
+    animation-delay: 2ms;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+  
+  .mainbolle__bolle3 {
+    color: white;
+    background-color: #FABDAB;
+    border: none;
+    padding: 40px;
+    border-radius: 50%;
+    width: 20px;
+    animation-name: color3;
+    animation-delay: 2ms;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    
+
+}
+
+.mainbolle__bolle4 {
+  color: grey;
+  background-color: #FABDAB;
+  border: none;
+  padding: 40px;
+  border-radius: 50%;
+  width: 20px;
+  animation-name: color4;
+  animation-delay: 2ms;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+@keyframes color4 {
+  from {
+    background-color: #A4BFAB;
+    transform: rotate(0deg);
+  }
+  to {
+    background-color: white;
+    transform: rotate(360deg);
+    
+
+  }
+}
+
+@keyframes color3 {
+  from {background-color: #6E8072;}
+  to {
+    background-color: white;
+    
+
+  }
+}
+
+@keyframes color2 {
+  from {background-color: #DBFFE4;
+        transform: rotate(0deg);
+  }
+  to {
+    background-color: white;
+    transform: rotate(360deg);
+
+  }
+}
+
+@keyframes color1 {
+  from {background-color: #374039;}
+  to {
+    background-color: white;
+    }
+}
+ 
+  
+
+
