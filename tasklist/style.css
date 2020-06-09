@@ -65,8 +65,11 @@ a:hover {
     color: #CBE5C8;
 }
 
+
 .editLink {
     font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
 }
 
 
@@ -87,6 +90,43 @@ a:hover {
     justify-content: space-around;
     margin-top: 10px;
 }
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 20px;
+    background-color: white;
+    height: 400px;
+    width: 200px;
+    padding: 20px;
+}
+
+.labelTitel {
+    font-weight: bold;
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    padding: 10px;
+    border: solid lightgrey;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.changeBtn {
+    border-radius: 20px;
+    border: solid lightgrey;
+}
+
+.changeBtn:hover {
+    color: #CBE5C8;
+}
+
+
+
+
 
 
 

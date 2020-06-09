@@ -40,12 +40,11 @@
             <p>{$taskContents['id']}</p>
             <p><strong>Duedate:</strong></p>
             <p>{$taskContents['duedate']}</p>
-            <div class='infoTrashBox'><a href='task-details.php?id=$taskID'>
-                <i class='fas fa-info-circle'></i></a><br><p><i class='far fa-trash-alt'></i></p>
-            </div>
         </div>
     
         <br><a class='editLink' href='task-edit.php?id=$taskID'>Edit Task</a>
+        <br><a class='editLink' href='task-list.php'>Back to Todo list</a>
+
     
     </div>";
 

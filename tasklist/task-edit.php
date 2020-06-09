@@ -63,30 +63,26 @@ $taskInhalt = $taskDetails->getOneById($taskID);
         
         <div class='title'><h1>Edit Task</h1></div>    
         
-            <form action='task-edit.php' method='POST'>
-            <label>Title: </label>
+        <form class="editForm" action='task-edit.php' method='POST'>
+            <label class="labelTitel">Title: </label>
             <input type='text' name='title' value='<?= $taskInhalt['title'];?>'>
             <br>
-            <label>Description: </label>
+            <label class="labelTitel">Description: </label>
             <input type='text' name='description' value='<?= $taskInhalt['description'];?>'>
             <br>
-            <label>duration</label>
+            <label class="labelTitel">duration</label>
             <input type='text' name='duration' value='<?= $taskInhalt['duration'];?>'>
             <br>
-            <label>Duedate: </label>
+            <label class="labelTitel">Duedate: </label>
             <input type='text' name='duedate' value='<?= $taskInhalt['duedate'];?>'>
             <br>
             <input type='hidden' name='id' value='<?= $taskInhalt['id'];?>'>
-            <button type='submit' name='submit'>change information</button>
+            <button class="changeBtn" type='submit' name='submit'>change information</button>
+            <a class='editLink' href='task-list.php'>Back to Todo list</a>
         </form>
         
-        <a href='task-details.php'>Back to details</a>
 
     </div>
-
-
-<a href='task-details.php'>Back to details</a>
-
 
 </body>
 </html>
