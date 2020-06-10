@@ -1,5 +1,5 @@
 <?php
-//started die sesstion funktionalität. muss zu oberst sein
+//started die session funktionalität. muss zu oberst sein
 session_start();
 
 

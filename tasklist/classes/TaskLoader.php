@@ -48,4 +48,14 @@ class TaskLoader
                 ':title' => $title, ':description' => $description, ':duration' => $duration, ':duedate' => $duedate)
         );
     }
+
+    public function deleteTask($id){
+        //prepared statement
+        $statement = DB::get()->prepare("DELETE FROM task WHERE id = :id");
+        $result = $statement -> execute(array(':id' => $id));
+        if ($result){
+            return $result;
+        }
+        throw new Exception("konnte nicht löschen!");
+    }
 }

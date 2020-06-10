@@ -27,8 +27,7 @@ require_once "init.php";
 
     <a class="container container--addTask" href="task-create.php">addTask <i class="fas fa-plus-circle"></i></a>
 
-    <?php
-
+<?php
 
     $taskLoader = new TaskLoader();
     $tasks = $taskLoader->getAll();
@@ -37,12 +36,33 @@ require_once "init.php";
         $title = $task["title"];
         $duedate = $task["duedate"];
         $description = $task["description"];
-        echo "<div class='container'><p><strong>Folgende Arbeiten sind zu erledigen:</strong>$title<p><br>
-        <div class='infoTrashBox'><a href='task-details.php?id=$id'><i class=\"fas fa-info-circle\"></i></a><br><p><i class=\"far fa-trash-alt\"></i></p></div></div>";
+
+
+    ?>
+
+        <div class="container"><p><strong>Folgende Arbeiten sind zu erledigen:</strong><?=$title?><p><br>
+            <div class="infoTrashBox">
+                <a href="task-details.php?id=<?=$id?>"<i class="fas fa-info-circle"></i><a/>
+                <a onclick="return confirm('wirklich Task mit id <?= $id ?> löschen?')"
+                href="delete-task.php?id=<?= $id ?>"<i class="far fa-trash-alt"></i><a/>
+            </div>
+        </div>
+
+    <?php
 
     }
+?>
 
 
+
+
+
+    <!--message anzeigen-->
+    <?php
+    if(isset($_SESSION['message'])){
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+    }
     ?>
 
 

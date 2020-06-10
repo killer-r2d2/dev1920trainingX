@@ -79,7 +79,7 @@ a:hover {
 }
 
 .fa-info-circle:before, .fa-trash-alt:before {
-
+    cursor: pointer;
     font-size: 30px;
 
 }
