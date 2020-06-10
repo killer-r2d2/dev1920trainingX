@@ -5,23 +5,44 @@ require_once "init.php";
 
 ?>
 
-            <form action="task-create.php" method="POST">
-                <label>Title: </label>
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9fd733068b.js" crossorigin="anonymous"></script>
+
+    <title>Task list</title>
+</head>
+<body>
+
+<div class='wrapper'>
+
+    <div class='title'><h1>Create Task</h1></div>
+
+    <form class="editForm" action="task-create.php" method="POST">
+                <label class="labelTitel">Title: </label>
                 <input type="text" name="title" id="">
                 <br>
-                <label>Description: </label>
+                <label class="labelTitel">Description: </label>
                 <input type="text" name="description" id="">
                 <br>
-                <label>duration</label>
+                <label class="labelTitel">duration</label>
                 <input type="text" name="duration" id="">
                 <br>
-                <label>Duedate: </label>
+                <label class="labelTitel">Duedate: </label>
                 <input type="text" name="duedate" id="">
                 <br>
-                <button type="submit" name="submit">Create</button>
-            </form>
+                <button class="changeBtn" type="submit" name="submit">Create</button>
+                <a class='editLink' href='task-list.php'>Back to Todo list</a>
+    </form>
 
-
+</div>
 
 
 
@@ -50,3 +71,5 @@ require_once "init.php";
         ?>
 
 
+</body>
+</html>

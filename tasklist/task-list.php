@@ -20,11 +20,15 @@ require_once "init.php";
 <body>
 
 
+
+
 <div class="wrapper">
 
     <div class="title"><h1>Mega Todo list</h1></div>
 
 
+    <a href="task-register.php"><i class="fas fa-cash-register"></i>Register</i></a>
+    <a href="task-login.php"><i class="fas fa-sign-in-alt">Sign in</i></a>
     <a class="container container--addTask" href="task-create.php">addTask <i class="fas fa-plus-circle"></i></a>
 
 <?php
@@ -63,6 +67,9 @@ require_once "init.php";
         echo $_SESSION['message'];
         unset($_SESSION['message']);
     }
+
+    echo "sesssion multi";
+
     ?>
 
 

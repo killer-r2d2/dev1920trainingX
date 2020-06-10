@@ -113,15 +113,21 @@ input {
     border: solid lightgrey;
     text-align: center;
     border-radius: 20px;
+
 }
 
 .changeBtn {
     border-radius: 20px;
     border: solid lightgrey;
+    cursor: pointer;
 }
 
 .changeBtn:hover {
     color: #CBE5C8;
+}
+
+.submitBtn {
+    cursor: pointer;
 }
 
 
