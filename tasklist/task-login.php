@@ -12,6 +12,7 @@
 <body>
 
 
+
 <?php
 require_once("init.php");
 //validieren, sind alle felder ausgefüllt und stimmt das passwort mit passwort repeat überein
