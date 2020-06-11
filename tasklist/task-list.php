@@ -29,8 +29,9 @@ require_once "init.php";
 
     <a href="task-register.php"><i class="fas fa-cash-register"></i>Register</i></a>
     <a href="task-login.php"><i class="fas fa-sign-in-alt">Sign in</i></a>
-    <a class="container container--addTask" href="task-create.php">addTask <i class="fas fa-plus-circle"></i></a>
-
+    <div class="container container--addTask">
+        <a href="task-create.php">addTask<i class="fas fa-plus-circle"></i></a>
+    </div>
 <?php
 
     $taskLoader = new TaskLoader();

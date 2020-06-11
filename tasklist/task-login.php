@@ -19,6 +19,8 @@ if (isset($_POST['submit'])){
     $statement = DB::get()->prepare("SELECT * FROM user WHERE username = :username LIMIT 1 ");
     $statement->execute([":username" => $_POST['username']]);
     $statement->fetch(PDO::FETCH_ASSOC);
+    //PDO::FETCH_ASSOC Ein assoziatives Array mit den Resultaten, wobei
+    //der Key dem Spaltennamen in der DB entspricht
 
     if (empty($_POST['username']) || empty($_POST['password']) ) {
         echo "Es fehlt ein Wert.";
