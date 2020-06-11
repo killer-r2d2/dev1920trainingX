@@ -60,18 +60,17 @@ a, a:visited, a:active {
     text-decoration: none;
     color: inherit;
 }
-/*
+
 a:hover {
     color: #CBE5C8;
 }
 
- */
+
 
 
 .editLink {
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
 }
 
 
@@ -96,7 +95,7 @@ a:hover {
     background-color: white;
     border-radius: 20px;
     background-color: white;
-    height: 400px;
+    height: 500px;
     width: 200px;
     padding: 20px;
 }

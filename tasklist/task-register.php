@@ -54,7 +54,9 @@ if (isset($_POST['submit'])){
                 <input type="password" name="password_repeat" placeholder="Passwort wiederholen" maxlength="20">
             <br>
             <input class="submitBtn" type="submit" name="submit" value="senden">
+            <br>
             <a class='editLink' href='task-list.php'>Back to Todo list</a>
+            <br>
         </form>
 
     </div>
